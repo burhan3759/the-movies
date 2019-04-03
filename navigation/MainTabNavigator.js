@@ -4,8 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import FavouritesScreen from '../screens/FavouritesScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -28,38 +27,24 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const FavouritesStack = createStackNavigator({
+  Favourites: FavouritesScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Movies',
+FavouritesStack.navigationOptions = {
+  tabBarLabel: 'Favourites',
   tabBarOptions: {
     activeTintColor: '#000000',
   },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-film' : 'md-film'}
+      name={'md-heart'}
     />
   ),
 };
 
-// const SettingsStack = createStackNavigator({
-//   Settings: SettingsScreen,
-// });
-
-// SettingsStack.navigationOptions = {
-//   tabBarLabel: 'Settings',
-//   tabBarIcon: ({ focused }) => (
-//     <TabBarIcon
-//       focused={focused}
-//       name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-//     />
-//   ),
-// };
-
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  FavouritesStack,
 });
