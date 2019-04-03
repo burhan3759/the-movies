@@ -3,7 +3,7 @@ Simple **react native** app made using [Expo](https://expo.io/). This app are us
 
 ### Features
 - [Expo](https://expo.io/)
-- [axios](https://github.com/axios/axios);
+- [axios](https://github.com/axios/axios)
 - [redux](https://redux.js.org/)
 - [react-navigation](https://reactnavigation.org/)
 
